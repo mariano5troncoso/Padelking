@@ -1,7 +1,6 @@
 import React, { useRef } from "react";
 import { Card, Input, Checkbox, Button, Typography } from "@material-tailwind/react";
 import Swal from 'sweetalert2';
-import { api, apiUrl, endpoints } from "../utils/api";
 import { Fade } from "react-awesome-reveal";
 import { useNavigate } from "react-router-dom";
 
@@ -20,7 +19,7 @@ const inputLabelStyle = {
   color: "white",
 };
 
-export function SignUp() {
+export default function SignUp() {
   const inputName = useRef(null);
   const inputEmail = useRef(null);
   const inputPhoto = useRef(null);

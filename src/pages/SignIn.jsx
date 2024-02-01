@@ -1,10 +1,10 @@
 import React, { useRef } from "react";
 import { Card, Input, Checkbox, Button, Typography } from "@material-tailwind/react";
 import Swal from 'sweetalert2';
-import axios from 'axios'; 
+/* import axios from 'axios'; */ 
 import { Fade } from "react-awesome-reveal";
 import { useNavigate } from "react-router-dom";
-import { endpoints } from "../utils/api";
+/* import { endpoints } from "../utils/api"; */
 
 
 const formContainerStyle = {
@@ -26,7 +26,7 @@ const labelStyle = {
   marginBottom: "0.5rem",
 };
 
-export function SignIn() {
+export default function SignIn()  {
   const inputEmail = useRef(null);
   const inputPassword = useRef(null);
   const navigate = useNavigate();

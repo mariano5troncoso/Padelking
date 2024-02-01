@@ -6,7 +6,7 @@ import { Fade , Slide } from "react-awesome-reveal";
 export default function AboutUS() {
   return (
     <div>
-      <NavbarSimple />
+     
 
 
 
@@ -27,7 +27,7 @@ export default function AboutUS() {
         </p>
         </Fade>
       </div>
-      <Footer />
+      
     </div>
   );
 }
