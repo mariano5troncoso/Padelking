@@ -1,7 +1,7 @@
 import React from "react"
 import { Fade } from "react-awesome-reveal";
 import { Link } from "react-router-dom";
-import ProductDetails from "./ProductDetails";
+
 
 const products = [
   {
@@ -134,7 +134,7 @@ export default function Products() {
           <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
             {products.map((product) => (
               <Link key={product._id} to={`/product/${product._id}`} className="group">
-                <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+                <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7 border border-black p-2">
                   <img
                     src={product.cover_photo[0]} // Solo muestra la primera foto del producto
                     alt={product.name}

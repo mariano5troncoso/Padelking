@@ -3,7 +3,7 @@ import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { IconButton } from "@material-tailwind/react";
 
-export function CarouselCustomArrows() {
+function CarouselCustomArrows() {
   return (
     <Carousel
       className="rounded-xl"
@@ -89,3 +89,5 @@ export function CarouselCustomArrows() {
     </Carousel>
   );
 }
+
+export default CarouselCustomArrows;
