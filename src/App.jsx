@@ -8,7 +8,8 @@ import SignUp from './pages/SignUp';
 import SignIn from './pages/SignIn';
 import AboutUs from './pages/AboutUs';
 import ProductDetails from './components/ProductDetails';
-import { productsData } from './components/Products';
+import { productsData } from './components/Palas';
+import Accesorios from './pages/AccesoriesCategory';
 
 const App = () => (
   <>
@@ -17,6 +18,7 @@ const App = () => (
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/paletas" element={<Paletas />} />
+        <Route path="/accesorios" element={<Accesorios />} />
         <Route path="/registro" element={<SignUp />} />
         <Route path="/iniciar-sesion" element={<SignIn />} />
         <Route path="/nosotros" element={<AboutUs />} />
