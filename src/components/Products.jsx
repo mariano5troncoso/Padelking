@@ -1,16 +1,22 @@
-import React, { useState } from "react";
+import React from "react";
 import { Fade } from "react-awesome-reveal";
 import { useNavigate } from "react-router-dom";
-import { productsData } from "./Palas";  // Importa el array de productos
+import { useCart } from '../redux/CartContext'; // Importa el contexto del carrito
+import { Button } from '@material-tailwind/react';
+import { productsData } from "./Palas";
 
 const Products = () => {
   const navigate = useNavigate();
-  const [selectedProduct, setSelectedProduct] = useState(null);
+  const { addToCart } = useCart(); // Utiliza la función addToCart del contexto
 
   const handleProductClick = (productId) => {
     const product = productsData.find((p) => p._id === productId);
-    setSelectedProduct(product);
     navigate(`/product/${productId}`);
+  };
+
+  const handleAddToCart = (productId) => {
+    const product = productsData.find((p) => p._id === productId);
+    addToCart(product);
   };
 
   return (
@@ -40,6 +46,9 @@ const Products = () => {
                   </div>
                   <p className="text-sm font-medium text-gray-900">{product.price}</p>
                 </div>
+                <Button className="mt-6 gap-2" style={{ borderRadius: "999px" }} onClick={() => handleAddToCart(product._id)}>
+                  Agregar al Carrito
+                </Button>
               </div>
             ))}
           </div>

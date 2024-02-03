@@ -1,9 +1,8 @@
 import React from 'react';
 import CarouselCustomArrows from '../components/Carousel';
 import Products from '../components/Products';
-import Footer from '../components/Footer';
-import { NavbarSimple } from '../components/NavBar'; 
 import Accesorios from './AccesoriesCategory';
+
 
 export default function Index() {
   return (
@@ -16,9 +15,10 @@ export default function Index() {
         </div>
       </header>
       <main>
+        
         <Products/>
         <Accesorios/>
-        <Footer />
+        
       </main>
     </>
   );

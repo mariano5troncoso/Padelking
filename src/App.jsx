@@ -11,6 +11,8 @@ import ProductDetails from './components/ProductDetails';
 import { productsData } from './components/Palas';
 import Accesorios from './pages/AccesoriesCategory';
 
+
+
 const App = () => (
   <>
     <NavbarSimple />

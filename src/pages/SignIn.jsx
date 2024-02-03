@@ -93,7 +93,7 @@ export default function SignIn()  {
                 <Input id="password" ref={inputPassword} type="password" size="lg" style={inputStyle} />
               </div>
               <Checkbox label={<Typography variant="small" color="white" className="flex items-center font-normal">Acepto los <a href="#" className="font-medium transition-colors hover:text-gray-900">&nbsp;Términos y condiciones</a></Typography>} containerProps={{ className: "-ml-2.5" }} />
-              <Button type="submit" className="mt-6" fullWidth>
+              <Button type="submit" className="mt-6 gap-2" fullWidth style={{ borderRadius: "999px" }}>
                 Iniciar Sesión
               </Button>
               <Typography color="white" className="mt-4 text-center font-normal">
