@@ -1,9 +1,8 @@
-import React from "react"
+import React, { useState } from "react";
 import { Fade } from "react-awesome-reveal";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-
-const products = [
+export const productsData = [
   {
     "_id": "21",
     "name": "Pala Siux Electra Stupa",
@@ -125,29 +124,51 @@ const products = [
   
 ];
   
-export default function Products() {
+const Products = () => {
+  const navigate = useNavigate();  // Reemplaza useHistory con useNavigate
+  const [selectedProduct, setSelectedProduct] = useState(null);
+
+  const handleProductClick = (productId) => {
+    const product = productsData.find((p) => p._id === productId);
+    setSelectedProduct(product);
+    // Redirigir a la ruta del producto usando useNavigate
+    navigate(`/product/${productId}`);
+  };
+
   return (
     <Fade>
-      <div className="bg-gradient-to-r from-blue-900 to-cyan-950">
+      <div className="bg-white">
         <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
-          <h2 className="sr-only">Products</h2>
-          <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
-            {products.map((product) => (
-              <Link key={product._id} to={`/product/${product._id}`} className="group">
-                <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7 border border-black p-2">
+          <h2 className="text-2xl font-bold tracking-tight text-gray-900">Customers also purchased</h2>
+
+          <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+            {productsData && productsData.map((product) => (
+              <div key={product._id} className="group relative" onClick={() => handleProductClick(product._id)}>
+                <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
                   <img
-                    src={product.cover_photo[0]} // Solo muestra la primera foto del producto
+                    src={product.cover_photo[0]}
                     alt={product.name}
-                    className="h-full w-full object-cover object-center group-hover:opacity-75"
+                    className="h-full w-full object-cover object-center lg:h-full lg:w-full"
                   />
+                  <span aria-hidden="true" className="absolute inset-0" />
                 </div>
-                <h3 className="mt-4 text-sm text-white">{product.name}</h3>
-                <p className="mt-1 text-lg font-medium text-white">{product.price}</p>
-              </Link>
+                <div className="mt-4 flex justify-between">
+                  <div>
+                    <h3 className="text-sm text-gray-700">
+                      <span aria-hidden="true" className="absolute inset-0" />
+                      {product.name}
+                    </h3>
+                    <p className="mt-1 text-sm text-gray-500">{product.brand}</p>
+                  </div>
+                  <p className="text-sm font-medium text-gray-900">{product.price}</p>
+                </div>
+              </div>
             ))}
           </div>
         </div>
       </div>
     </Fade>
   );
-}
+};
+
+export default Products;
