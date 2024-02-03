@@ -1,15 +1,10 @@
-import React from "react";
-import { useParams } from "react-router-dom";
+import React from 'react';
+import { useParams } from 'react-router-dom';
+import { CarouselDefault } from './PhotoPaletas';
 
 const ProductDetails = ({ products }) => {
   const { productId } = useParams();
-
-  // Verificar si products está definido y es un array antes de llamar a find
-  if (!products || !Array.isArray(products)) {
-    return <div>Error: No hay productos disponibles.</div>;
-  }
-
-  const product = products.find((p) => p._id === parseInt(productId));
+  const product = products.find((p) => p._id === productId);
 
   if (!product) {
     return <div>Producto no encontrado</div>;
@@ -17,13 +12,16 @@ const ProductDetails = ({ products }) => {
 
   return (
     <div>
-      <h2>{product.name}</h2>
-      <img src={product.cover_photo[0]} alt={product.name} />
-      <p>{product.description}</p>
+      <h2 className="text-3xl text-center   mb-6">{product.name}</h2>
+      <CarouselDefault images={product.cover_photo} />
+      <article>
+      <p className='text-balance bg-slate-400 m-3 text-center'>{product.description}</p>
       <p>Marca: {product.brand}</p>
       <p>Precio: {product.price}</p>
+      </article>
+      
     </div>
   );
 };
 
-export default ProductDetails;  
+export default ProductDetails;
