@@ -1,16 +1,14 @@
 import React from 'react';
-import Footer from '../components/Footer';
 import ProductDetails from '../components/ProductDetails';
 
-export default function detalles() {
-    
+const Detalles = ({ products }) => {
   return (
     <div>
       <h1>Página de detalles</h1>
-      <ProductDetails/>
-      <Footer/>
-      {/* Agrega aquí el contenido de tu página de paletas */}
+      <ProductDetails products={products} />
+      {/* Agrega aquí el contenido adicional de tu página de detalles */}
     </div>
-    
   );
 }
+
+export default Detalles;
