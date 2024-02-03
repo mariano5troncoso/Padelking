@@ -3,11 +3,12 @@ import CarouselCustomArrows from '../components/Carousel';
 import Products from '../components/Products';
 import Footer from '../components/Footer';
 import { NavbarSimple } from '../components/NavBar'; 
+import Accesorios from './AccesoriesCategory';
 
 export default function Index() {
   return (
     <>
-      <NavbarSimple />
+      
       <CarouselCustomArrows />
       <header className="bg-gradient-to-r from-blue-900 to-cyan-950">
         <div className="mt-2">
@@ -16,6 +17,7 @@ export default function Index() {
       </header>
       <main>
         <Products/>
+        <Accesorios/>
         <Footer />
       </main>
     </>
