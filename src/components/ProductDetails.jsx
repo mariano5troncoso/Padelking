@@ -11,28 +11,29 @@ const ProductDetails = ({ products }) => {
   }
 
   return (
-    <div>
-      <h2 className="text-3xl text-center mb-6">{product.name}</h2>
-      <CarouselDefault images={product.cover_photo} />
+    
+      <><h2 className="text-3xl text-center mb-6">{product.name}</h2><CarouselDefault images={product.cover_photo} /><div className="max-w-screen-md mx-auto">
       <article>
-        <table className="table-auto mx-auto mt-5 border ">
+        <table className="table-auto mx-auto mt-5 border">
           <tbody>
             <tr>
-              <td className="border-separate px-4 py-2 text-white bg-slate-600">Descripción:</td>
-              <td className="border-separate px-4 py-2 text-balance bg-slate-200">{product.description}</td>
+              <td className="border px-4 py-2 text-white bg-slate-600">Descripción:</td>
+              <td className="border px-4 py-2 text-balance bg-slate-400">{product.description}</td>
             </tr>
             <tr>
-              <td className="border px-4 py-2 text-white bg-slate-600 ">Marca:</td>
-              <td className="border px-4 py-2  bg-slate-200">{product.brand}</td>
+              <td className="border px-4 py-2 text-white bg-slate-600">Marca:</td>
+              <td className="border px-4 py-2 bg-slate-400">{product.brand}</td>
             </tr>
             <tr>
-              <td className="border px-4 py-2 text-white bg-slate-600 ">Precio:</td>
-              <td className="border px-4 py-2  bg-slate-200 ">{product.price}$USD</td>
+              <td className="border px-4 py-2 text-white bg-slate-600">Precio:</td>
+              <td className="border px-4 py-2 bg-slate-400">{product.price}$USD</td>
             </tr>
           </tbody>
         </table>
+
       </article>
-    </div>
+    </div></>
+    
   );
 };
 

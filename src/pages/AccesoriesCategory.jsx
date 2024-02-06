@@ -38,9 +38,6 @@ export default function Accesorios() {
                 </div>
                 <p className="text-sm font-medium text-gray-900">{accessory.price}</p>
               </div>
-              <Button className="mt-6 gap-2" style={{ borderRadius: "999px" }} onClick={() => handleAddToCart(accessory._id)}>
-                Agregar al Carrito
-              </Button>
             </div>
           ))}
         </div>

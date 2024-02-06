@@ -30,8 +30,8 @@ export const productsData = [
     "name": "Nox Tempo WPT Luxury Series",
     "description": "Preciso como un reloj y cómodo como un guante. Así es la pala NOX TEMPO World Padel Tour 2023. Una de las 4 palas Oficiales de World Padel Tour. La versión Tempo world padel tour 2023 destaca por su manejabilidad y precisión. La principal novedad es el núcleo hr3 de eva negra que, combinado con el carbono 12k de sus caras, proporciona una sensación de solidez y firmeza. esta pala incluye el pionero sistema de cordón de seguridad reemplazable smartstrap®, ahora evolucionado en una pieza compacta para mayor seguridad y durabilidad. Más higiénico, seguro y personalizable.",
     "cover_photo": [
-      "https://www.tradeinn.com/f/13941/139414603_2/nox-tempo-wpt-luxury-series-padel-racket.jpg",
       "https://www.tradeinn.com/f/13941/139414603_6/nox-tempo-wpt-luxury-series-padel-racket.jpg",
+      "https://www.tradeinn.com/f/13941/139414603_2/nox-tempo-wpt-luxury-series-padel-racket.jpg",
       "https://www.tradeinn.com/f/13941/139414603_8/nox-tempo-wpt-luxury-series-padel-racket.jpg"
     ],
     "price": 158.99,
@@ -57,8 +57,10 @@ export const productsData = [
     "description": "¿Buscas una pala de pádel de alta calidad que sea a la vez elegante y duradera? No busques más que la pala de pádel NOX Nerbo WPT Luxury Series en color negro y rojo. Esta pala de pádel de primera línea está diseñada para jugadores serios que exigen lo mejor en rendimiento y estilo. Con tecnología avanzada y materiales de primera calidad, esta pala ofrece potencia, control y precisión incomparables en la cancha. Con su elegante diseño en negro y rojo, seguramente llamará la atención e impresionará a tus oponentes. Entonces, ¿por qué esperar? ¡Hazte con la pala de pádel NOX Nerbo WPT Luxury Series hoy y empieza a dominar la competición como nunca antes!",
     "cover_photo": [
       "https://www.tradeinn.com/f/13941/139414599/nox-nerbo-wpt-luxury-series-padel-racket.jpg",
-      "https://www.tradeinn.com/f/13941/139414599_5/nox-nerbo-wpt-luxury-series-padel-racket.jpg",
-      "https://www.tradeinn.com/f/13941/139414599_7/nox-nerbo-wpt-luxury-series-padel-racket.jpg"
+      "https://www.tradeinn.com/f/13941/139414599_7/nox-nerbo-wpt-luxury-series-padel-racket.jpg",
+      "https://www.tradeinn.com/f/13941/139414599_5/nox-nerbo-wpt-luxury-series-padel-racket.jpg"
+      
+      
     ],
     "price": 186.99,
     "brand": "Nox",

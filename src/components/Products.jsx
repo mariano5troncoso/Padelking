@@ -2,7 +2,6 @@ import React from "react";
 import { Fade } from "react-awesome-reveal";
 import { useNavigate } from "react-router-dom";
 import { useCart } from '../redux/CartContext'; // Importa el contexto del carrito
-import { Button } from '@material-tailwind/react';
 import { productsData } from "./Palas";
 
 const Products = () => {
